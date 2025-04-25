@@ -54,7 +54,9 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões\n", pib2);
     printf("Pontos turísticos: %d\n", pontos2);
-
+    
+    print("Novo Comit\n");
+    
     return 0;
 }
 // O código acima é um exemplo simples de como cadastrar e exibir dados de cartas de um jogo.
