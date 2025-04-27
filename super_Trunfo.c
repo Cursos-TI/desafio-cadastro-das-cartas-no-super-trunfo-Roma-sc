@@ -55,10 +55,30 @@ int main() {
     printf("PIB: %.2f bilhões\n", pib2);
     printf("Pontos turísticos: %d\n", pontos2);
     
-    print("Novo Comit\n");
+    //Variáveis
     
+    double populacao,area, Pib, densidade, Pib_per_capita;
+
+    // Entrada de Dados
+    
+    printf(" Digite a populacao total: ");
+    scanf("%lf",&populacao);
+
+    printf(" Digite a area km total: ");
+    scanf("%lf",&area);
+
+    printf(" Digite o Pib total: ");
+    scanf("%lf",&Pib);
+
+    // Cálculos
+
+    densidade = populacao / area;
+    Pib_per_capita = Pib / populacao;
+
+    // Saída
+
+    printf("\nDensidade populacional: %2.f hab/km\n",densidade);
+    printf("PIB pe capita : R$ %2.f\n", Pib_per_capita);
+
     return 0;
 }
-// O código acima é um exemplo simples de como cadastrar e exibir dados de cartas de um jogo.
-// Ele não inclui a lógica de comparação entre as cartas, que seria necessária para o jogo Super Trunfo.
-// Para implementar essa lógica, você precisaria adicionar funções para comparar os atributos das cartas e determinar o vencedor.
