@@ -1,6 +1,13 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
 
 int main() {
+
+    srand(time(NULL));
+
+
     // Declaração das variáveis para a carta 1
     char codigo1[4];
     int populacao1;
@@ -14,6 +21,12 @@ int main() {
     float area2;
     float pib2;
     int pontos2;
+
+    int indexJogador = rand() % 3;
+    int indexComputador;
+    char carta_computador[90];
+    char valor_jogador[80];
+    int carta_jogador;
 
     // Cadastro da carta 1
     printf("Digite o código da carta 1 (ex: A01): ");
@@ -54,7 +67,7 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões\n", pib2);
     printf("Pontos turísticos: %d\n", pontos2);
-    
+ 
     //Variáveis
     
     double populacao,area, Pib, densidade, Pib_per_capita;
@@ -71,7 +84,6 @@ int main() {
     scanf("%lf",&Pib);
 
     // Cálculos
-
     densidade = populacao / area;
     Pib_per_capita = Pib / populacao;
 
@@ -79,9 +91,19 @@ int main() {
 
     printf("\nDensidade populacional: %2.f hab/km\n",densidade);
     printf("PIB pe capita : R$ %2.f\n", Pib_per_capita);
-    printf("Novo Comit \n");
-   
-    return 0;
-    
-   
+
+    int calcularForcaTotal(carta_jogador c) ;
+        return (c.forca * 2 + c.velocidade + c.inteligencia) / 4;
+
+    int valor_jogador[80] = carta_jogador;
+int valor_computador[90] = carta_computador;
+
+if (valor_jogador > valor_computador) {
+    printf("Você venceu!\n");
+} else if (valor_jogador < valor_computador) {
+    printf("Você perdeu!\n");
+} else {
+    printf("Empate!\n");
+
+
 }
