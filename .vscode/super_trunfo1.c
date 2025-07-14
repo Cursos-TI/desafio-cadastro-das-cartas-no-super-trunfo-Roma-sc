@@ -13,6 +13,7 @@ int main(){
     int pontosTuristicos1;
     float densidade1;
     float pibPerCapita1;
+    float superPoder1;
 
     // Variedade para a carta 02
 
@@ -25,6 +26,7 @@ int main(){
     int pontosTuristicos2;
     float densidade2;
     float pibPerCapita2;
+    float superPoder2;
 
 // Cadastrando a Carta 01
 
@@ -52,7 +54,8 @@ printf("Digite a quantidade de pontos Turisticos:  ");
 scanf("%d", &pontosTuristicos1);
 
 densidade1 = (float)populacao1 / area1; 
-    pibPerCapita1 = (pib1 * 1000000000) / populacao1;
+pibPerCapita1 = (pib1 * 1000000000) / populacao1;
+superPoder1 = (float)populacao1 + area1 + (pib1 * 1000000000.0) + (float)pontosTuristicos1 + pibPerCapita1 + (1.0 / densidade1);
 
 // Exibindo Carta 01
 
@@ -94,6 +97,7 @@ printf("\n\n--- Cadastro da Carta 2 ---\n");
  
     densidade2 = (float)populacao2 / area2;
     pibPerCapita2 = (pib2 * 1000000000) / populacao2;
+    superPoder2 = (float)populacao2 + area2 + (pib2 * 1000000000.0) + (float)pontosTuristicos2 + pibPerCapita2 + (1.0 / densidade2);
 
 // Exibindo Carta 02
 
@@ -107,6 +111,67 @@ printf("\n\n--- Carta 2 Cadastrada ---\n");
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
     printf("Densidade Populacional: %.2f hab/km2\n", densidade2);
     printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
+
+    // A BATALHA FINAL: COMPARAÇÕES
+    
+    printf("\n\n--- Comparacao de Cartas ---\n");
+
+    // Comparando População: Maior vence
+    printf("Populacao: ");
+    if (populacao1 > populacao2) {
+        printf("Carta 1 venceu (%d)\n", 1);
+    } else {
+        printf("Carta 2 venceu (%d)\n", 0);
+    }
+
+    // Comparando Área: Maior vence
+    printf("Area: ");
+    if (area1 > area2) {
+        printf("Carta 1 venceu (%d)\n", 1);
+    } else {
+        printf("Carta 2 venceu (%d)\n", 0);
+    }
+
+    // Comparando PIB: Maior vence
+    printf("PIB: ");
+    if (pib1 > pib2) {
+        printf("Carta 1 venceu (%d)\n", 1);
+    } else {
+        printf("Carta 2 venceu (%d)\n", 0);
+    }
+
+    // Comparando Pontos Turísticos: Maior vence
+    printf("Pontos Turisticos: ");
+    if (pontosTuristicos1 > pontosTuristicos2) {
+        printf("Carta 1 venceu (%d)\n", 1);
+    } else {
+        printf("Carta 2 venceu (%d)\n", 0);
+    }
+
+    // Comparando Densidade: MENOR vence
+    printf("Densidade Populacional: ");
+    if (densidade1 < densidade2) {
+        printf("Carta 1 venceu (%d)\n", 1);
+    } else {
+        printf("Carta 2 venceu (%d)\n", 0);
+    }
+
+    // Comparando PIB per Capita: Maior vence
+    printf("PIB per Capita: ");
+    if (pibPerCapita1 > pibPerCapita2) {
+        printf("Carta 1 venceu (%d)\n", 1);
+    } else {
+        printf("Carta 2 venceu (%d)\n", 0);
+    }
+
+    // Comparando Super Poder: Maior vence
+    printf("Super Poder: ");
+    if (superPoder1 > superPoder2) {
+        printf("Carta 1 venceu (%d)\n", 1);
+    } else {
+        printf("Carta 2 venceu (%d)\n", 0);
+    }
+
 
     return 0;
     
